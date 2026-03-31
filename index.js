@@ -160,6 +160,7 @@ shouldSyncHistoryMessage: msg => {
 if (!alya.authState.creds.registered) {
 const phoneNumber = '6282185651048';
 const pairingalya = "ALYACHAN";
+await new Promise(r => setTimeout(r, 3000))
 let code = await alya.requestPairingCode(phoneNumber, pairingalya);
 code = code?.match(/.{1,4}/g)?.join("-") || code;
 console.log(`Ini kodenya:`, code);
