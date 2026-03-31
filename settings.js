@@ -261,8 +261,8 @@ global.doc6 = 'application/vnd.android.package-archive'
 global.spotify_client_id = '1fec8604715f4d12ab59ac34b8b29bcf'
 global.spotify_client_secret = '55eedc0575c34b19a7b8244bb32ae145'
 global.spotify_backup_token = 'BQBX0FyyM3cKUjTD0VoQ9J5mO7QRSB7SVfkpQfhyW7DrVgZbDpA5wtQLOjyc132fHOZsycDzeJcgR0pMoDJvaoDvrxbOoKoxybHLKCpZ-ltnA43FQng306H3Oqz7RWWRRd90mIpGFJ72i4qVAIVGPCFH9F8VMkgJuuvnaJ6nFPvASmNcbLQh6K0b7m11A-jRlOcOsIihZcWmTWNZihMspp58fsivV-lDWNQxQTkFI4_q40otxjXTTpq3LvqJOxIq4cRjxcGhWBKtNZ7-HLfspJ9amTGdVFel6KQxQlGKIca7Tq-3AsMuFiImLRs89nKpdQI6'
-global.supaurl = 'https://uzyzpgujphlmesbmcwca.supabase.co'
-global.supakey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6eXpwZ3VqcGhsbWVzYm1jd2NhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNjQwMjcsImV4cCI6MjA3MDY0MDAyN30.SwjgDAcEDLvjmzKzxHPdtHdjLbH1Zsr20MbPI4s6F94'
+global.supaurl = 'https://vollepvkstjbtgtnyqqb.supabase.co'
+global.supakey = 'sb_publishable_jTa3bm2M63j_3EOkCnDFpA_QvGUoNbK'
 
 
 let file = require.resolve(__filename)
