@@ -207,8 +207,6 @@ try{
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
 			await delay(1999);
                         await uploadSession();
-			alya.newsletterFollow('120363422352987107@newsletter')
-            alya.groupAcceptInvite("DpuIfQNn4WZGG4O0YtDn7S")
 		}
 } catch (err) {
 	  console.log('Error in Connection.update '+err)
