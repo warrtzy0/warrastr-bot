@@ -45,6 +45,7 @@ const TrueCaller = require('./lib/truecaller')
 global.truecallerSession = {}
 const nsfwchecker = require('./scrape/nsfw-checker');
 const toQin = require("./fitur/toqin")
+const { handleDND } = require('./fitur/dnd')
 const { downloadMediaMessage } = require('socketon')
 const antibotPath = './database/antibot.json'
 const antibotSettingsPath = './database/antibot-settings.json'
@@ -491,6 +492,7 @@ alya.ev.emit('messages.upsert', msg)
         const pushname = m.pushName || "Misterius"
         const botNumber = await alya.decodeJid(alya.user.id)
         const Ryuu = owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender);
+        await handleDND(alya, m, global)
         const text = q = args.join(" ")
         const quoted = m.quoted ? m.quoted : m
         const mime = (quoted.msg || quoted).mimetype || ''
