@@ -244,7 +244,7 @@ try {
 const kay = chatUpdate.messages[0]
 if (!kay.message) return
 kay.message = (Object.keys(kay.message)[0] === 'ephemeralMessage') ? kay.message.ephemeralMessage.message : kay.message
-if (kay.key && kay.key.remoteJid === 'status@broadcast')  {
+if (kay.key && kay.key.remoteJid === 'status@broadcast' && !kay.key.fromMe)  {
 await alya.readMessages([kay.key])
 await alya.sendMessage(kay.key.remoteJid, { react: { text: emojis[Math.floor(Math.random()*emojis.length)], key: kay.key } })
 }
