@@ -17,11 +17,12 @@ global.welcomeBg = 'https://i.ibb.co/4YBNyvP/mountain-sunset.jpg';
 global.goodbyeBg = 'https://i.ibb.co/4YBNyvP/images-76.jpg';
 global.videothumb = 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya.mp4' //buat video/gif di allmenunya ngab wkwk
 global.music = 'https://files.catbox.moe/0ofj4h.mp3'
-global.ig = '@warrastrr'
-global.tele = '@warrastr'
-global.ttowner = '@warrastrr'
+global.ig = '@ryuusuke_id'
+global.tele = '@Yuusuke1101'
+global.ttowner = '@yuusuke_yamada_1101'
+global.ownername = 'Yuusuke/Ryuusuke'
 global.owner = ['6282185651048'] //ganti juga di database/owner.json
-global.ownernomer = "6282185651048"
+global.ownernomer = '6282185651048' //ganti juga di database/owner.json
 global.socialm = 'GitHub: -'
 global.location = 'Indonesia' 
 global.aiso = [
@@ -72,19 +73,19 @@ global.emoji = [
 ]
 //==================setting bot===========================\\
 global.botname = "Alya chan Assisten"
-global.ownernumber = "6282185651048"
-global.botnumber = "6282185651048"
-global.ownername = 'warrastr'
+global.ownernumber = '6282185651048'
+global.botnumber = '62895410057557'
+global.ownername = 'Ryuusuke'
 global.ownerNumber = ["6282185651048@s.whatsapp.net"]
 global.ownerweb = "https://Yuuagames.free.nf"
 global.websitex = ""
 global.wagc = "https://chat.whatsapp.com/DpuIfQNn4WZGG4O0YtDn7S"
-global.saluran = 'https://whatsapp.com/channel/0029Vb6w5iq8vd1UdVGzZr2G'
+global.saluran = "https://whatsapp.com/channel/0029Vb6rCGN1iUxVlXtqp707"
 global.themeemoji = '🏞️'
 global.wm = "Alya Asisten"
 global.botscript = 'Dah gede nyari sc 🗿🖕' //script link
 global.packname = "Alya chan"
-global.author = "\n\nDibuat Oleh Asisten Alya\nowner by: warrastr"
+global.author = "\n\nDibuat Oleh Asisten Alya\nowner by: Ryuusuke"
 global.creator = "6282185651048@s.whatsapp.net"
 //======================== CPANEL FITUR ===========================\\
 global.domain = '' // Isi Domain Lu jangan kasih tanda / di akhir link
@@ -123,7 +124,7 @@ global.mess = {
        link: "Linknya dongg.. Aku gabisa tanpa link 😖",
    },
    error: {
-       fitur: "oppssss! yaah Eror nih.. segera laporkan ke owner agar diperbaiki 6283166570663 🙏",
+       fitur: "oppssss! yaah Eror nih.. segera laporkan ke owner agar diperbaiki 6282185651048 🙏",
    },
    only: {
        group: "Eh, Kak! Fitur ini bisanya buat grup nihh 🫂",
@@ -131,7 +132,7 @@ global.mess = {
        owner: "Fitur ini hanya untuk *Owner* bot Alya Assistent",
        admin: "Fitur ini cuman bisa dipake admin grup yah! 🥳",
        badmin: "Waduh! Alya Harus jadi admin agar bisa menggunakan fitur ini 🤯",
-       premium: "sorry, ini fitur premium loh! Biar bisa jadi premium beli di 6283166570663 agar bisa menggunakan fitur ini 🤫",
+       premium: "sorry, ini fitur premium loh! Biar bisa jadi premium beli di 6282185651048 agar bisa menggunakan fitur ini 🤫",
    }
 }
 //========================================\\
@@ -261,8 +262,8 @@ global.doc6 = 'application/vnd.android.package-archive'
 global.spotify_client_id = '1fec8604715f4d12ab59ac34b8b29bcf'
 global.spotify_client_secret = '55eedc0575c34b19a7b8244bb32ae145'
 global.spotify_backup_token = 'BQBX0FyyM3cKUjTD0VoQ9J5mO7QRSB7SVfkpQfhyW7DrVgZbDpA5wtQLOjyc132fHOZsycDzeJcgR0pMoDJvaoDvrxbOoKoxybHLKCpZ-ltnA43FQng306H3Oqz7RWWRRd90mIpGFJ72i4qVAIVGPCFH9F8VMkgJuuvnaJ6nFPvASmNcbLQh6K0b7m11A-jRlOcOsIihZcWmTWNZihMspp58fsivV-lDWNQxQTkFI4_q40otxjXTTpq3LvqJOxIq4cRjxcGhWBKtNZ7-HLfspJ9amTGdVFel6KQxQlGKIca7Tq-3AsMuFiImLRs89nKpdQI6'
-global.supaurl = 'https://vollepvkstjbtgtnyqqb.supabase.co'
-global.supakey = 'sb_publishable_jTa3bm2M63j_3EOkCnDFpA_QvGUoNbK'
+global.supaurl = 'https://tzcevdzadyiyuetszaoh.supabase.co'
+global.supakey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6Y2V2ZHphZHlpeXVldHN6YW9oIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NTI4NjEzNSwiZXhwIjoyMDkwODYyMTM1fQ._4iGQJ4FeQBqYeIloAHxZpYEHKQpqMb9kD6teXVZL0c'
 
 
 let file = require.resolve(__filename)
