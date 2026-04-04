@@ -357,33 +357,31 @@ function saveAutoClose() {
     fs.writeFileSync('./database/autoco.json', JSON.stringify(autoCloseDB, null, 2));
 }
 const DB_FILE = './database/database.json';
-function loadDB() {
-  if (fs.existsSync(DB_FILE)) {
-    try {
-      const raw = fs.readFileSync(DB_FILE);
-      return JSON.parse(raw);
-    } catch (err) {
-      console.error('Error reading DB file:', err);
-      return { chats: {} };
-    }
-  } else {
-    return { chats: {} };
+async function loadDB() {
+  try {
+    const { data, error } = await supabase
+      .from('bot_database')
+      .select('value')
+      .eq('key', 'main')
+      .single();
+    if (error || !data) return { chats: {}, users: {}, settings: {}, others: {}, game: {}, sticker: {}, database: {} };
+    return data.value;
+  } catch (e) {
+    console.error('Supabase loadDB error:', e);
+    return { chats: {}, users: {}, settings: {}, others: {}, game: {}, sticker: {}, database: {} };
   }
 }
-function saveDB(db) {
-  fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
+async function saveDB(db) {
+  try {
+    await supabase
+      .from('bot_database')
+      .upsert({ key: 'main', value: db });
+  } catch (e) {
+    console.error('Supabase saveDB error:', e);
+  }
 }
-global.db = loadDB();
-if (global.db) global.db = {
-sticker: {},
-database: {}, 
-game: {},
-others: {},
-users: {},
-chats: {},
-settings: {},
-...(global.db || {})
-}
+loadDB().then(result => { global.db = { sticker: {}, database: {}, game: {}, others: {}, users: {}, chats: {}, settings: {}, ...(result || {}) }; });
+setInterval(() => { if (global.db) saveDB(global.db); }, 30000);
 // read database
 let tebaklagu = []
 let _family100 = []
