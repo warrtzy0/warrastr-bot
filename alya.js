@@ -23,8 +23,8 @@ const salam = moment(Date.now()).tz('Asia/Jakarta').locale('id').format('a')
 const { absenList, saveAbsen, resetAbsen } = require('./lib/absen');
 const { createClient } = require('@supabase/supabase-js');
 
-const SUPABASE_URL = 'https://uzyzpgujphlmesbmcwca.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6eXpwZ3VqcGhsbWVzYm1jd2NhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNjQwMjcsImV4cCI6MjA3MDY0MDAyN30.SwjgDAcEDLvjmzKzxHPdtHdjLbH1Zsr20MbPI4s6F94';
+const SUPABASE_URL = global.supaurl;
+const SUPABASE_KEY = global.supakey;
 const supabase = createClient(global.supaurl, global.supakey);
 const { isSetWelcome, addSetWelcome, changeSetWelcome, removeSetWelcome } = require('./lib/setwelcome');
 const { Primbon } = require('scrape-primbon')
