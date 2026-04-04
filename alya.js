@@ -4313,7 +4313,7 @@ function getRole(level) {
 }
 
 function xpRequired(level) {
- return 100000 * (level + 1)
+ return 100 * (level + 1)
 }
 
 async function addXP(m) {
