@@ -2,6 +2,7 @@ const dndData = {}
 
 async function handleDND(alya, m, settings) {
     const sender = m.sender
+    console.log("SENDER:", sender, "OWNER:", settings.owner)
     const isOwner = settings.owner.includes(sender.replace('@s.whatsapp.net', ''))
     
     // command handler
