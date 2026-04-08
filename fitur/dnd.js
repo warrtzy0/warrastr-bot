@@ -35,6 +35,7 @@ async function handleDND(alya, m, settings) {
     // auto reply handler
     if (!settings.dnd?.active) return
     if (m.isGroup) return
+    console.log("fromMe:", m.key.fromMe, "type:", m.mtype)
     if (m.key.fromMe) return
     if (sender === settings.owner[0] + '@s.whatsapp.net') return
 
