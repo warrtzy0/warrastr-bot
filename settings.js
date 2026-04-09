@@ -17,10 +17,10 @@ global.welcomeBg = 'https://i.ibb.co/4YBNyvP/mountain-sunset.jpg';
 global.goodbyeBg = 'https://i.ibb.co/4YBNyvP/images-76.jpg';
 global.videothumb = 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya.mp4' //buat video/gif di allmenunya ngab wkwk
 global.music = 'https://files.catbox.moe/0ofj4h.mp3'
-global.ig = '@ryuusuke_id'
-global.tele = '@Yuusuke1101'
-global.ttowner = '@yuusuke_yamada_1101'
-global.ownername = 'Yuusuke/Ryuusuke'
+global.ig = '@warrastr'
+global.tele = '@warrastr'
+global.ttowner = '@warrastr'
+global.ownername = 'warrastr'
 global.owner = ['6282185651048'] //ganti juga di database/owner.json
 global.ownernomer = '6282185651048' //ganti juga di database/owner.json
 global.socialm = 'GitHub: -'
@@ -72,20 +72,20 @@ global.emoji = [
     "😮"
 ]
 //==================setting bot===========================\\
-global.botname = "Alya chan Assisten"
+global.botname = "astro"
 global.ownernumber = '6282185651048'
 global.botnumber = '62895410057557'
-global.ownername = 'Ryuusuke'
+global.ownername = 'warrastr'
 global.ownerNumber = ["6282185651048@s.whatsapp.net"]
 global.ownerweb = "https://Yuuagames.free.nf"
 global.websitex = ""
-global.wagc = "https://chat.whatsapp.com/DpuIfQNn4WZGG4O0YtDn7S"
-global.saluran = "https://whatsapp.com/channel/0029Vb6rCGN1iUxVlXtqp707"
+global.wagc = "https://chat.whatsapp.com/KA4HgE7J3fQFmVrtuTXwwf"
+global.saluran = "https://whatsapp.com/channel/0029Vb6w5iq8vd1UdVGzZr2G"
 global.themeemoji = '🏞️'
-global.wm = "Alya Asisten"
+global.wm = "astro"
 global.botscript = 'Dah gede nyari sc 🗿🖕' //script link
-global.packname = "Alya chan"
-global.author = "\n\nDibuat Oleh Asisten Alya\nowner by: Ryuusuke"
+global.packname = "astro"
+global.author = "\n\nDibuat Oleh astroteam\nowner by: warrastr\n"
 global.creator = "6282185651048@s.whatsapp.net"
 //======================== CPANEL FITUR ===========================\\
 global.domain = '' // Isi Domain Lu jangan kasih tanda / di akhir link

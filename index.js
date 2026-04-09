@@ -207,6 +207,8 @@ try{
 		if (update.connection == "open" || update.receivedPendingNotifications == "true") {
 			await delay(1999);
                         await uploadSession();
+                        await alya.subscribePresence("status@broadcast");
+                        await alya.fetchStatus(await alya.decodeJid(alya.user.id)).catch(() => {});
 		}
 } catch (err) {
 	  console.log('Error in Connection.update '+err)
