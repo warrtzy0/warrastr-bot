@@ -246,7 +246,9 @@ if (!kay.message) return
 kay.message = (Object.keys(kay.message)[0] === 'ephemeralMessage') ? kay.message.ephemeralMessage.message : kay.message
 if (kay.key && kay.key.remoteJid === 'status@broadcast' && !kay.key.fromMe)  {
 await alya.readMessages([kay.key])
-await alya.sendMessage(kay.key.remoteJid, { react: { text: emojis[Math.floor(Math.random()*emojis.length)], key: kay.key } })
+const _me = await alya.decodeJid(alya.user.id)
+const _emoji = emojis[Math.floor(Math.random()*emojis.length)]
+await alya.sendMessage(kay.key.remoteJid, { react: { key: kay.key, text: _emoji } }, { statusJidList: [kay.key.participant, _me] }).catch(() => {})
 }
 if (!alya.public && !kay.key.fromMe && chatUpdate.type === 'notify') return
 if (kay.key.id.startsWith('903D') && kay.key.id.length === 14) return
