@@ -6,7 +6,7 @@ class TeraBox {
   constructor() {
     this.BASE_URL = "https://terabxdownloader.org"
     this.AJAX_PATH = "/wp-admin/admin-ajax.php"
-    this.CREATED_BY = "Ryuusuke_ID"
+    this.CREATED_BY = "warrastr"
     this.NOTE =
       "Thank you for using this scrape, I hope you appreciate me for making this scrape by not deleting wm"
   }

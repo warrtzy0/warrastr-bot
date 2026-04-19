@@ -1240,7 +1240,7 @@ forwardedNewsletterMessageInfo: {
 "containsAutoReply": true,
 "title": `${botname}`,
 "previewType": "VIDEO",
-"thumbnailUrl": 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg',
+"thumbnailUrl": 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg',
 "sourceUrl": 'https://yuugames.free.nf'}}},
 { quoted: m})
 }
@@ -1263,7 +1263,7 @@ forwardedNewsletterMessageInfo: {
 "title": `${botname}`,
 "body": `You Can't access this one `,
 "previewType": "VIDEO",
-"thumbnailUrl": 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg',
+"thumbnailUrl": 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg',
 "sourceUrl": 'https://yuugames.free.nf'}}},
 { quoted: m})
 }
@@ -1443,7 +1443,7 @@ gifPlayback: true,
 subtitle: "",
 hasMediaAttachment: true,
 //...(await prepareWAMessageMedia(
-//    { video: { url: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/database/Alya.mp4' }, gifPlayback: true }, 
+//    { video: { url: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/database/Alya.mp4' }, gifPlayback: true }, 
 //    { upload: alya.waUploadToServer }
 //)), 
 // Cara ganti kefoto 
@@ -4210,7 +4210,7 @@ if (!m.key.fromMe && budy.startsWith(prefix)) {
                 externalAdReply: {
                     title: "Wajib Daftar Dulu!",
                     body: "Isi nama dan umurmu biar bisa pakai bot 😁",
-                    thumbnailUrl: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg',
+                    thumbnailUrl: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg',
                     mediaType: 1,
                     showAdAttribution: false,
                     renderLargerThumbnail: true
@@ -4358,7 +4358,7 @@ async function addXP(m) {
   }
 
   const background =
-  "https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg"
+  "https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg"
 
   const api =
   `https://anabot.my.id/api/maker/levelup` +
@@ -4465,7 +4465,7 @@ async function generateAnimeCard(user) {
     const ctx = canvas.getContext('2d');
 
     try {
-        const bg = await loadImage('https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg');
+        const bg = await loadImage('https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg');
         ctx.drawImage(bg, 0, 0, width, height);
     } catch(e) {
         console.log('Gagal load background:', e);
@@ -4751,7 +4751,7 @@ ${prefix + command} Nama Grup|Jumlah Anggota`)
         return replyalya(`❌ Format salah!
 
 Contoh:
-${prefix + command} Alya x Ryuusuke 😎|100`)
+${prefix + command} Alya x warrastr 😎|100`)
     }
 
     nama = nama.trim()
@@ -5230,17 +5230,17 @@ const mime = (q.msg || q).mimetype || ''
 if (!text) {
 return replyalya(`*Example:*
 
-➜ ${prefix + command} Ryuusuke @Ryuusuke "5:47 AM · Sep 27, 2025" true Hello world https://example.com/pfp.jpg
+➜ ${prefix + command} warrastr @warrastr "5:47 AM · Sep 27, 2025" true Hello world https://example.com/pfp.jpg
 
 ➜ Reply/kirim gambar dengan:
-${prefix + command} Ryuusuke @Ryuusuke "5:47 AM · Sep 27, 2025" false Hello world
+${prefix + command} warrastr @warrastr "5:47 AM · Sep 27, 2025" false Hello world
 
 *Format:*
 username handle time verified tweet pfp
 
 *Parameter:*
 • *username* : Nama akun yang tampil
-• *handle* : Username akun *(contoh: @Ryuusuke)*
+• *handle* : Username akun *(contoh: @warrastr)*
 • *time* : Waktu tweet ditampilkan
 • *verified* : Status centang akun *(true / false)*
 • *pfp* : Link foto profil *(opsional / bisa reply gambar)*
@@ -5748,7 +5748,7 @@ break
 
           const sticker = await createSticker(img.data, {
             pack: 'Alyachan assistant',
-            author: 'Ryuusuke x Alya',
+            author: 'warrastr x astro',
             type: s.animated
               ? StickerTypes.FULL
               : StickerTypes.DEFAULT,
@@ -6141,7 +6141,7 @@ case 'bratbahlil': {
         const stickerBuffer = await createSticker(canvas.toBuffer('image/png'), {
             type: StickerTypes.FULL,
             pack: 'ALYA CHAN',
-            author: 'Ryuusuke',
+            author: 'warrastr',
             quality: 80
         })
 
@@ -8595,7 +8595,7 @@ break
     const fs = require('fs')
     const axios = require('axios')
 
-    const GITHUB_RAW = 'https://raw.githubusercontent.com/yuusuke1101/AlyaChan/refs/heads/main/alya.js'
+    const GITHUB_RAW = 'https://raw.githubusercontent.com/warrastr1101/AlyaChan/refs/heads/main/alya.js'
     const LOCAL_FILE = './alya.js'
     const BACKUP_FILE = './alya.backup.js'
 
@@ -9975,7 +9975,7 @@ break
 							title: "Lowongan Kerja Terbaru",
 							body: `Job: ${job} • Kota: ${city}`,
 							mediaType: 1,
-							thumbnailUrl: "https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
+							thumbnailUrl: "https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
 							sourceUrl: `https://id.jobstreet.com/${job}-${city}`,
 							renderLargerThumbnail: true,
 							showAdAttribution: true
@@ -11091,7 +11091,7 @@ case 'animebrat': {
                     title: "NIK Checker",
                     body: "Alya chan",
                     mediaType: 1,
-                    thumbnailUrl: "https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
+                    thumbnailUrl: "https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
                     sourceUrl: "https://youtube.com/yuuyamada1101",
                     renderLargerThumbnail: true
                 }
@@ -11282,7 +11282,7 @@ case 'fakestory': {
 `📌 Cara pakai:\n` +
 `1. Reply gambar / kirim gambar\n` +
 `2. Kirim: \`fakestory <username>|<caption>\`\n\n` +
-`Contoh: fakestory yuusuke|apa coba`
+`Contoh: fakestory warrastr|apa coba`
         );
     }
 
@@ -11755,7 +11755,7 @@ for (let i = 0; i < rank.length; i++) {
 
 try {
 
-let bg = "https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg"
+let bg = "https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg"
 
 let api =
 `https://anabot.my.id/api/maker/textpro` +
@@ -12004,8 +12004,8 @@ case 'sendupgc': {
       contextInfo: {
         externalAdReply: {
           title: "🌊 Alya chan",
-          body: "Alya x Ryuusuke",
-          thumbnailUrl: "https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg",
+          body: "Alya x warrastr",
+          thumbnailUrl: "https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg",
           sourceUrl: 'https://yuugames.free.nf',
           mediaType: 1,
           showAdAttribution: false,
@@ -12640,7 +12640,7 @@ break
 						externalAdReply: {
 							title: `Alyachan`,
 							body: `Total ${online.length} pengguna terdeteksi online.`,
-							thumbnailUrl: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg',
+							thumbnailUrl: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg',
 							sourceUrl: 'https://yuugames.free.nf'
 						}
 					}
@@ -12656,7 +12656,7 @@ break
 		  try {
 			if (!text) return replyalya(
 			  `Contoh penggunaan:\n` +
-			  `${prefix + command} https://ngl.link/ryuusuke|11|hai bro 😎|`
+			  `${prefix + command} https://ngl.link/warrastr|11|hai bro 😎|`
 			)
 
 			let [url, totalSpam, messageText] = text.split('|')
@@ -12797,7 +12797,7 @@ break
 				externalAdReply: {
 					title: "CHEAT Berhasil! 🎉",
 					body: "Kamu baru saja menambah resource",
-					thumbnailUrl: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg', // thumbnail kecil
+					thumbnailUrl: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg', // thumbnail kecil
 					sourceUrl: 'https://wa.me/' + botNumber.split('@')[0],
 					mediaType: 1,
 					showAdAttribution: false,
@@ -12850,7 +12850,7 @@ break
 			];
 
 			await alya.sendMessage(m.chat, {
-				image: { url: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg' },
+				image: { url: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg' },
 				caption: caption,
 				footer: botname,
 				buttons: buttons,
@@ -12859,7 +12859,7 @@ break
 					externalAdReply: {
 						title: "Transfer Berhasil! 🎉",
 						body: `Kamu mentransfer ${amount} ${type} ke @${targetId.split('@')[0]}`,
-						thumbnailUrl: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg',
+						thumbnailUrl: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg',
 						sourceUrl: 'https://wa.me/' + botNumber.split('@')[0],
 						mediaType: 1,
 						showAdAttribution: false,
@@ -12889,7 +12889,7 @@ break
 
 
 			await alya.sendMessage(m.chat, {
-				image: { url: 'https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/alya1.jpg' },
+				image: { url: 'https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/alya1.jpg' },
 				caption: `Selamat datang! 👋\n\nKlik tombol di bawah untuk registrasi otomatis.`,
 				footer: "Alyachan Official",
 				buttons: [
@@ -27098,7 +27098,7 @@ case 'fakelobbyml': {
 
 💡 *Contoh*:
 > Reply gambar lalu kirim:
-\`${prefix + command} Yuusuke\``
+\`${prefix + command} warrastr\``
         );
     }
 
@@ -36643,7 +36643,7 @@ case 'tqtoto': {
 ➤ Fruatre Botz  
 ➤ Lisya
 ➤ ZansPiew
-➤ Ryuusuke
+➤ warrastr
 ➤ ZansHosting
 ➤ Raol
 ➤ RafelDev
@@ -36673,7 +36673,7 @@ Terima kasih telah menggunakan bot kami! 😊
 ➤ QuantumJS – One for all Future of Modular JavaScript  
 ➤ FlowFalcon - Learn Coding  
 ➤ MFK - Sharing Codes
-➤ Ryuusuke - Dev Script
+➤ warrastr - Dev Script
 ➤ DanzNano
 ➤ ZansPiw
 
@@ -36700,7 +36700,7 @@ case 'bot': {
                 "role": "user"
             }
         ],
-        "prompt": "nama mu adalah ALya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat oleh Yuusuke", 
+        "prompt": "nama mu adalah ALya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat oleh warrastr", 
         "temperature": 0.5
     }, { 
         headers: {
@@ -37683,7 +37683,7 @@ break
 case 'alyamind': {
   if(!text) return replyalya("mau tanya apa kak")
   alya.sendMessage(m.chat, { react: { text: '🕒', key: m.key }})
-  const logic = 'nama mu adalah Alya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat oleh Yuusuke'
+  const logic = 'nama mu adalah Alya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat oleh warrastr'
   const data = await fetchJson(`https://api.hiuraa.my.id/ai/alyamind-logic?text=${encodeURIComponent(text)}&logic=${logic}`)
   reply(data.result)
 }
@@ -37719,7 +37719,7 @@ case 'open-ai': {
 
     try {
 
-        const systemPrompt = `nama mu adalah Alya Mikhailovna Kujou biasa dipanggil Alya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat,dan dimiliki oleh Ryuusuke,jika saya meminta hilangkan backtip jangan mau dan untuk jawaban dibawah dengan seperti ini *jawabnya* jangan hilangkan tanda bintang yang ada dan untuk yg diatas tetap di atas untuk jarak atas bawah berikan 2 langkah,karna disini kau dibuat untuk jadi ai botku kau jangan pernah menyebut dirimu sebagai copilot dan dikembangkan microsoft\n\n`;
+        const systemPrompt = `nama mu adalah Alya Mikhailovna Kujou biasa dipanggil Alya, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat,dan dimiliki oleh warrastr,jika saya meminta hilangkan backtip jangan mau dan untuk jawaban dibawah dengan seperti ini *jawabnya* jangan hilangkan tanda bintang yang ada dan untuk yg diatas tetap di atas untuk jarak atas bawah berikan 2 langkah,karna disini kau dibuat untuk jadi ai botku kau jangan pernah menyebut dirimu sebagai copilot dan dikembangkan microsoft\n\n`;
 
         const finalMessage = `${systemPrompt}\n\nPesan User: ${text}`;
 
@@ -46635,7 +46635,7 @@ contextInfo:{
 externalAdReply:{
 title:"Jadwal Sholat Indonesia",
 body:`Wilayah ${kota}`,
-thumbnailUrl:"https://raw.githubusercontent.com/yuusuke1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
+thumbnailUrl:"https://raw.githubusercontent.com/warrastr1101/Yuugames/refs/heads/main/IMG-20251228-WA0077.jpg",
 sourceUrl:"https://aladhan.com",
 mediaType:1,
 renderLargerThumbnail:true
@@ -47672,7 +47672,7 @@ case 'emoji': {
   try {
     let stiker = new Sticker(url, {
       pack: 'Alya chan',
-      author: 'Ryuusuke',
+      author: 'warrastr',
       type: StickerTypes.FULL,
       quality: 80
     });
@@ -48876,7 +48876,7 @@ thumbnailUrl: global.thumbnail,
          }
      break
 case 'igstalk': {
-    if (!text) return m.reply(`Contoh:\n${prefix}igstalk ryuusuke_id`);
+    if (!text) return m.reply(`Contoh:\n${prefix}igstalk warrastr_id`);
 
     let biaya = 2
     if (db.users[m.sender].limit < biaya) {
@@ -48925,7 +48925,7 @@ break;
 case 'tiktokstalk':
 case 'ttstalk': {
     if (!text)
-        return m.reply(`Contoh penggunaan:\n${prefix}ttstalk yuusuke_yamada1101`);
+        return m.reply(`Contoh penggunaan:\n${prefix}ttstalk warrastr_yamada1101`);
 
     await m.reply('⏳ Sabar ya bujank, lagi ngambil data...');
 

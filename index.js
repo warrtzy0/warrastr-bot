@@ -158,7 +158,7 @@ shouldSyncHistoryMessage: msg => {
     }
     // =================================================
 if (!alya.authState.creds.registered) {
-const phoneNumber = '6282185651048';
+const phoneNumber = '6281376213262';
 const pairingalya = "ALYACHAN";
 await new Promise(r => setTimeout(r, 3000))
 let code = await alya.requestPairingCode(phoneNumber, pairingalya);

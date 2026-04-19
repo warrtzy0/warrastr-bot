@@ -21,8 +21,8 @@ global.ig = '@warrastr'
 global.tele = '@warrastr'
 global.ttowner = '@warrastr'
 global.ownername = 'warrastr'
-global.owner = ['6282185651048'] //ganti juga di database/owner.json
-global.ownernomer = '6282185651048' //ganti juga di database/owner.json
+global.owner = ['6281376213262'] //ganti juga di database/owner.json
+global.ownernomer = '6281376213262' //ganti juga di database/owner.json
 global.socialm = 'GitHub: -'
 global.location = 'Indonesia' 
 global.aiso = [
@@ -43,13 +43,13 @@ global.api.reactch = [
 	'4a84210413ac6675cf51c1f975a716eae3753c479818f173836bacc0eaea4e2c',
 ];
 //========================setting Payment=====================\\
-global.nodana = '0895410057557' // KOSONG KAN JIKA TIDAK ADA
-global.nogopay = '083166570663' // KOSONG KAN JIKA TIDAK ADA 
-global.noovo = '083166570663'// KOSONG KAN JIKA TIDAK ADA
+global.nodana = '085158082001' // KOSONG KAN JIKA TIDAK ADA
+global.nogopay = '6281376213262' // KOSONG KAN JIKA TIDAK ADA 
+global.noovo = '6281376213262'// KOSONG KAN JIKA TIDAK ADA
 //==================setting Payment Name===========================\\
-global.andana = 'Ryuusuke/Syahrul k.' // KOSONG KAN JIKA TIDAK ADA
-global.angopay = 'Syahrul k' // KOSONG KAN JIKA TIDAK ADA
-global.anovo = 'syahrul k' // KOSONG KAN JIKA TIDAK ADA
+global.andana = 'NURHAYATI' // KOSONG KAN JIKA TIDAK ADA
+global.angopay = 'warrastr' // KOSONG KAN JIKA TIDAK ADA
+global.anovo = 'warrastr' // KOSONG KAN JIKA TIDAK ADA
 //BATAS//
 global.settings = {
     autoreact: true
@@ -73,10 +73,10 @@ global.emoji = [
 ]
 //==================setting bot===========================\\
 global.botname = "astro"
-global.ownernumber = '6282185651048'
-global.botnumber = '62895410057557'
+global.ownernumber = '6281376213262'
+global.botnumber = '6281376213262'
 global.ownername = 'warrastr'
-global.ownerNumber = ["6282185651048@s.whatsapp.net"]
+global.ownerNumber = ["6281376213262@s.whatsapp.net"]
 global.ownerweb = "https://Yuuagames.free.nf"
 global.websitex = ""
 global.wagc = "https://chat.whatsapp.com/KA4HgE7J3fQFmVrtuTXwwf"
@@ -86,7 +86,7 @@ global.wm = "astro"
 global.botscript = 'Dah gede nyari sc 🗿🖕' //script link
 global.packname = "astro"
 global.author = "\n\nDibuat Oleh astroteam\nowner by: warrastr\n"
-global.creator = "6282185651048@s.whatsapp.net"
+global.creator = "6281376213262@s.whatsapp.net"
 //======================== CPANEL FITUR ===========================\\
 global.domain = '' // Isi Domain Lu jangan kasih tanda / di akhir link
 global.apikey = 'ptla_rBcXGJhiY4FHkclS6xVVcPk5gu5tGMUTfn6PWhEIsyq' // Isi Apikey Plta Lu
@@ -124,7 +124,7 @@ global.mess = {
        link: "Linknya dongg.. Aku gabisa tanpa link 😖",
    },
    error: {
-       fitur: "oppssss! yaah Eror nih.. segera laporkan ke owner agar diperbaiki 6282185651048 🙏",
+       fitur: "oppssss! yaah Eror nih.. segera laporkan ke owner agar diperbaiki 6281376213262 🙏",
    },
    only: {
        group: "Eh, Kak! Fitur ini bisanya buat grup nihh 🫂",
@@ -132,7 +132,7 @@ global.mess = {
        owner: "Fitur ini hanya untuk *Owner* bot Alya Assistent",
        admin: "Fitur ini cuman bisa dipake admin grup yah! 🥳",
        badmin: "Waduh! Alya Harus jadi admin agar bisa menggunakan fitur ini 🤯",
-       premium: "sorry, ini fitur premium loh! Biar bisa jadi premium beli di 6282185651048 agar bisa menggunakan fitur ini 🤫",
+       premium: "sorry, ini fitur premium loh! Biar bisa jadi premium beli di 6281376213262 agar bisa menggunakan fitur ini 🤫",
    }
 }
 //========================================\\
