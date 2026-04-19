@@ -1,59 +1,70 @@
-const dndData = {}
+const fs = require('fs')
+const path = require('path')
+const dndFile = path.join(__dirname, '../data/dnd.json')
+
+const loadDND = () => {
+    try {
+        if (fs.existsSync(dndFile)) return JSON.parse(fs.readFileSync(dndFile))
+    } catch {}
+    return { active: false, message: 'Lagi DND, nanti balas ya! 🔕', replied: {}, spam: {} }
+}
+
+const saveDND = (data) => {
+    try { fs.writeFileSync(dndFile, JSON.stringify(data, null, 2)) } catch {}
+}
 
 async function handleDND(alya, m, settings) {
     const sender = m.sender
-    console.log("SENDER:", sender, "OWNER:", settings.owner)
     const isOwner = settings.owner.includes(sender.replace('@s.whatsapp.net', ''))
-    
-    // command handler
+    const dnd = loadDND()
+
     if (m.text?.startsWith('.dnd')) {
         if (!isOwner) return
         const args = m.text.split(' ')
-        
+
         if (args[1] === 'on') {
-            settings.dnd = settings.dnd || {}
-            settings.dnd.active = true
-            settings.dnd.replied = {}
+            dnd.active = true
+            dnd.replied = {}
+            saveDND(dnd)
             await m.reply('DND aktif 🔕')
         }
         else if (args[1] === 'off') {
-            settings.dnd = settings.dnd || {}
-            settings.dnd.active = false
-            settings.dnd.replied = {}
+            dnd.active = false
+            dnd.replied = {}
+            saveDND(dnd)
             await m.reply('DND nonaktif 🔔')
         }
         else if (args[1] === 'set') {
             const pesan = args.slice(2).join(' ')
             if (!pesan) return m.reply('Contoh: .dnd set Lagi sibuk, nanti balas ya!')
-            settings.dnd = settings.dnd || {}
-            settings.dnd.message = pesan
+            dnd.message = pesan
+            saveDND(dnd)
             await m.reply(`Pesan DND diset: ${pesan}`)
         }
         return
     }
 
-    // auto reply handler
-    if (!settings.dnd?.active) return
+    if (!dnd.active) return
     if (m.isGroup) return
-    console.log("fromMe:", m.key.fromMe, "type:", m.mtype)
     if (m.key.fromMe) return
     if (sender === settings.owner[0] + '@s.whatsapp.net') return
 
-    settings.dnd.replied = settings.dnd.replied || {}
-    settings.dnd.spam = settings.dnd.spam || {}
+    dnd.replied = dnd.replied || {}
+    dnd.spam = dnd.spam || {}
 
-    const count = (settings.dnd.spam[sender] || 0) + 1
-    settings.dnd.spam[sender] = count
+    const count = (dnd.spam[sender] || 0) + 1
+    dnd.spam[sender] = count
+    saveDND(dnd)
 
     if (count > 3) {
         await alya.sendMessage(sender, { text: '⚠️ Jangan spam! Lagi DND, tunggu ya.' })
         return
     }
 
-    if (!settings.dnd.replied[sender]) {
-        const pesan = settings.dnd.message || 'Lagi DND, nanti balas ya! 🔕'
-        await alya.sendMessage(sender, { text: pesan })
-        settings.dnd.replied[sender] = true
+    if (!dnd.replied[sender]) {
+        await alya.sendMessage(sender, { text: dnd.message })
+        dnd.replied[sender] = true
+        saveDND(dnd)
     }
 }
 
