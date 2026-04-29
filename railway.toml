@@ -1,2 +1,11 @@
 [build]
-buildCommand = "apt-get update && apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev libpixman-1-dev"
+builder = "NIXPACKS"
+
+[build.nixpacksPlan.phases.install]
+cmds = ["npm install --ignore-scripts"]
+
+[build.nixpacksPlan.phases.build]
+cmds = ["apt-get update && apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev libpixman-1-dev && npm rebuild canvas"]
+
+[deploy]
+startCommand = "node index.js"
