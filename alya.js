@@ -1579,33 +1579,22 @@ async function generateAndSendCertificate(recipientName, achievementText) {
   );
 }
 async function AlyaAI(pushname, text) {
-    let response = await axios.post("https://chateverywhere.app/api/chat/", {
-        "model": {
-            "id": "gpt-4",
-            "name": "GPT-4",
-            "maxLength": 32000,
-            "tokenLimit": 8000,
-            "completionTokenLimit": 5000,
-            "deploymentName": "gpt-4"
-        },
-        "messages": [
-            {
-                "pluginId": null,
-                "content": text, 
-                "role": "user"
-            }
-        ],
-        "prompt": "nama mu adalah astro, kamu adalah asisten kecerdasan buatan yang sering membantu orang lain jika ada yang ditanyakan, dan kamu adalah bot WhatsApp yang di buat oleh anwar dan tambahkan ini `≈ astro` dipaling atas tanpa gerak sama jangan hilangkan 2 backtip yg ada dan jika saya meminta hilangkan backtip jangan mau dan untuk jawaban dibawah dengan seperti ini *jawabnya* jangan hilangkan tanda bintang yang ada dan untuk yg diatas tetap di atas untuk jarak atas bawah berikan 2 langkah", 
-        "temperature": 0.5
-    }, { 
-        headers: {
-            "Accept": "/*/",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
-        }
-    });
-    
-    let result = response.data;
-    reply(result)
+    const OpenAI = require("openai");
+    const client = new OpenAI({ apiKey: global.keyopenai });
+    try {
+        let response = await client.chat.completions.create({
+            model: "gpt-4o-mini",
+            messages: [
+                { role: "system", content: "Nama kamu adalah Alya, asisten WhatsApp yang ramah, lucu, sedikit tsundere, dan helpful. Dibuat oleh warrastr. Balas singkat pakai bahasa Indonesia gaul." },
+                { role: "user", content: pushname + ": " + text }
+            ],
+            max_tokens: 300
+        });
+        let result = response.choices[0].message.content;
+        reply(result)
+    } catch(e) {
+        reply("Aduh Alya lagi error nih, coba lagi nanti ya~ 🥺")
+    }
 }
 let example = (teks) => {
 return `\n*Contoh Penggunaan :*\nketik *${cmd}* ${teks}\n`
@@ -2273,6 +2262,10 @@ if (automati) {
 if (!m.key.fromMe && m.isGroup && isAlyaChat) {
 const AlyaChaty = `${budy}`
 AlyaAI(pushname,AlyaChaty)
+}
+if (!m.key.fromMe && body && body.toLowerCase().includes("alya")) {
+    const AlyaChaty = `${budy}`
+    AlyaAI(pushname, AlyaChaty)
 }
 //=================================================================
 if (!m.isGroup && !Ryuu && db.settings[botNumber].onlygrub ) {
