@@ -1,14 +1,8 @@
 [build]
 builder = "NIXPACKS"
-
-[build.nixpacksPlan.phases.setup]
-nixPkgs = ["cairo", "pango", "libjpeg", "giflib", "librsvg", "pixman", "pkg-config", "python3", "gcc", "gnumake"]
-
-[build.nixpacksPlan.phases.install]
-cmds = ["npm install --ignore-scripts"]
-
-[build.nixpacksPlan.phases.build]
-cmds = ["npm rebuild canvas --build-from-source"]
+buildCommand = "npm install --ignore-scripts && npm rebuild canvas --build-from-source"
 
 [deploy]
 startCommand = "node index.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
