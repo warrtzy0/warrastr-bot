@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     libgif-dev \
     librsvg2-dev \
     libpixman-1-dev \
+    libvips-dev \
     python3 \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
@@ -14,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --ignore-scripts
-RUN npm rebuild canvas --build-from-source
+RUN npm rebuild canvas --build-from-source && npm rebuild sharp --build-from-source
 COPY . .
 
 CMD ["node", "index.js"]
