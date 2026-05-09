@@ -62,7 +62,7 @@ const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep, reSize } = require('./lib/myfunc')
 
 const prefix = '.'
-let phoneNumber = "6283166570663"
+let phoneNumber = '6281376213262'
 global.db = JSON.parse(fs.readFileSync('./database/database.json'))
 if (global.db) global.db = {
 sticker: {},
@@ -160,8 +160,8 @@ shouldSyncHistoryMessage: msg => {
     }
     // =================================================
 if (!alya.authState.creds.registered) {
-const phoneNumber = await question('Masukin nomor yang mau dijadikan bot.. contoh: 6283166570663\n');
-const pairingalya = "ALYACHAN";
+
+const pairingalya = "WWWWWWWW";
 let code = await alya.requestPairingCode(phoneNumber, pairingalya);
 code = code?.match(/.{1,4}/g)?.join("-") || code;
 console.log(`Ini kodenya:`, code);
