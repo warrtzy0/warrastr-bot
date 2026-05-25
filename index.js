@@ -90,7 +90,7 @@ require('./index.js')
 nocache('../index.js', module => console.log(color('[ CHANGE ]', 'green'), color(`'${module}'`, 'green'), 'Updated'))
 
 async function alyaInd() {
-    await delay(5000)
+    await delay(10000)
     await checkVersionUpdate();
 	const {  saveCreds, state } = await useMultiFileAuthState(`./${sessionName}`)
 	const msgRetryCounterCache = new NodeCache()
@@ -210,7 +210,7 @@ alya.ev.on('connection.update', async (update) => {
         if (connection === "open") {
             console.log(color("✅ Bot Connected", "green"))
 
-            await delay(5000)
+            await delay(10000)
 
             const channels = [
     "120363380388430434@newsletter",
