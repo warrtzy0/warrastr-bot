@@ -159,19 +159,23 @@ shouldSyncHistoryMessage: msg => {
         return await _sendMessage(jid, content, options)
     }
     // =================================================
-if (!alya.authState.creds.registered) {
-const phoneNumber = '6281376213262';
-const pairingalya = "ALYACHAN";
-let code = await alya.requestPairingCode(phoneNumber, pairingalya);
-code = code?.match(/.{1,4}/g)?.join("-") || code;
-console.log(`Ini kodenya:`, code);
-}
+
     store.bind(alya.ev)
 
 alya.ev.on('connection.update', async (update) => {
     const { connection, lastDisconnect } = update
 
     try {
+        if (connection === 'connecting' && !alya.authState.creds.registered) {
+            await delay(3000)
+            const phoneNumber = '6281376213262';
+            const pairingalya = "ALYACHAN";
+            let code = await alya.requestPairingCode(phoneNumber, pairingalya).catch(() => null);
+            if (code) {
+                code = code?.match(/.{1,4}/g)?.join("-") || code;
+                console.log(`Ini kodenya:`, code);
+            }
+        }
         if (connection === 'close') {
             let reason = new Boom(lastDisconnect?.error)?.output.statusCode
 
